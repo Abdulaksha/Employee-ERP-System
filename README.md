@@ -16,7 +16,7 @@ A full-stack Human Resource Management System designed to streamline employee da
 *(Add your screenshots here! Example:)*
 | Dashboard | Salary Master |
 |-----------|---------------|
-| ![Dashboard](./FormEmp.png) | ![Salary Setup](./Salary.png) |
+| ![Dashboard](./public/FormEmp.png) | ![Salary Setup](./public/Salary.png) |
 
 ---
 
