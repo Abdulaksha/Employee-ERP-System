@@ -16,7 +16,7 @@ A full-stack Human Resource Management System designed to streamline employee da
 *(Add your screenshots here! Example:)*
 | Dashboard | Salary Master |
 |-----------|---------------|
-| ([Screenshot (56).png](https://github.com/Abdulaksha/Employee-ERP-System/commit/5ef255777975c6ab36f836e55180b3bbee4330e7#diff-ec7e2a1b2a70a91e080ed3b0e2e8bb8b7d5fd4cc27e345bfc6984d1f0b05ec28)) | ![Salary Setup](Screenshot (55).png) |
+| ![Dashboard](./Screenshot (56).png) | ![Salary Setup](./Screenshot (55).png) |
 
 ---
 
