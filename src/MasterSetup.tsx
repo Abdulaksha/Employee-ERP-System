@@ -121,7 +121,7 @@ function MasterSetup() {
             await axios.delete(`https://employee-api-p2ts.onrender.com/master/${activeTab}/${id}`)
           
             setListData(listData.filter(item=>item.id!==id))
-            if(activeTab=="dept"){
+            if(activeTab==="dept"){
                 setDeptList(deptList.filter(d=>d.id!==id))
             }
             alert("Deleted Successfully")
