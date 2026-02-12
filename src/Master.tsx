@@ -50,7 +50,7 @@ function Master() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/employees");
+        const res = await axios.get("https://employee-api-p2ts.onrender.com/employees");
         console.log("Employees Loaded:", res.data); 
         setEmployees(res.data);
       } catch (err) {
@@ -81,7 +81,7 @@ function Master() {
         
 
         try {
-            const res = await axios.get(`http://localhost:5000/salary/${foundEmp.code}`);
+            const res = await axios.get(`https://employee-api-p2ts.onrender.com/salary/${foundEmp.code}`);
             
             if (res.data.length > 0) {
              
@@ -170,7 +170,7 @@ function Master() {
 
     try {
         const body = { emp_code: actualCode, rows: rows };
-        await axios.post("http://localhost:5000/salary", body);
+        await axios.post("https://employee-api-p2ts.onrender.com/salary", body);
         alert("Salary Structure Saved Successfully!");
       setSearchCode("");
         setEmpName("");

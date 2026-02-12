@@ -28,9 +28,9 @@ function Inputemp() {
   useEffect(() => {
     const loadMasters = async () => {
         try {
-            const depts = await axios.get("http://localhost:5000/master/departments");
-            const rels = await axios.get("http://localhost:5000/master/religions");
-            const countries = await axios.get("http://localhost:5000/master/countries");
+            const depts = await axios.get("https://employee-api-p2ts.onrender.com/master/departments");
+            const rels = await axios.get("https://employee-api-p2ts.onrender.com/master/religions");
+            const countries = await axios.get("https://employee-api-p2ts.onrender.com/master/countries");
             
             setDeptList(depts.data);
             setReligionList(rels.data);
@@ -50,7 +50,7 @@ function Inputemp() {
       
       if(selectedDept) {
           try {
-            const res = await axios.get(`http://localhost:5000/master/designations/${selectedDept}`);
+            const res = await axios.get(`https://employee-api-p2ts.onrender.com/master/designations/${selectedDept}`);
             setRoleList(res.data);
           } catch(err) { console.error(err); }
       } else {
@@ -74,7 +74,7 @@ function Inputemp() {
 
     try {
       const body = { name, code, department, role, email, doj, religion, country };
-      await axios.post("http://localhost:5000/employees", body);
+      await axios.post("https://employee-api-p2ts.onrender.com/employees", body);
 
       alert("Employee added Successfully");
       

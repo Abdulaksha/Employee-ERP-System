@@ -35,7 +35,7 @@ function MasterSetup() {
          
         if(activeTab==="role")return;
         if(endpoint) {
-            const res = await axios.get(`http://localhost:5000/master/${endpoint}`);
+            const res = await axios.get(`https://employee-api-p2ts.onrender.com/master/${endpoint}`);
             setListData(res.data);
         }
     } catch (err) {
@@ -47,7 +47,7 @@ function MasterSetup() {
   
   
   useEffect(() => {
-    axios.get("http://localhost:5000/master/departments").then(res => setDeptList(res.data));
+    axios.get("https://employee-api-p2ts.onrender.com/master/departments").then(res => setDeptList(res.data));
   }, []);
 
   
@@ -63,7 +63,7 @@ function MasterSetup() {
         if (activeTab === "role" && selectedDept) {
             try {
                
-                const res = await axios.get(`http://localhost:5000/master/designations/${selectedDept}`);
+                const res = await axios.get(`https://employee-api-p2ts.onrender.com/master/designations/${selectedDept}`);
                 setListData(res.data); 
             } catch (err) { console.error(err); }
         }
@@ -89,7 +89,7 @@ function MasterSetup() {
     }
 
     try {
-        await axios.post("http://localhost:5000/master/add", {
+        await axios.post("https://employee-api-p2ts.onrender.com/master/add", {
             type: activeTab,
             name: inputText,
             dept_name: selectedDept
@@ -99,14 +99,14 @@ function MasterSetup() {
 
              if (activeTab === "role") {
              
-             const res = await axios.get(`http://localhost:5000/master/designations/${selectedDept}`);
+             const res = await axios.get(`https://employee-api-p2ts.onrender.com/master/designations/${selectedDept}`);
              setListData(res.data);
         } else {
              fetchData();
        
         
         if(activeTab === "dept") {
-            const res = await axios.get("http://localhost:5000/master/departments");
+            const res = await axios.get("https://employee-api-p2ts.onrender.com/master/departments");
             setDeptList(res.data);
         }
     }
@@ -118,7 +118,7 @@ function MasterSetup() {
   const handelet=async(id:number)=>{
       if(!window.confirm("Are u sure to delete this")) return;
         try{
-            await axios.delete(`http://localhost:5000/master/${activeTab}/${id}`)
+            await axios.delete(`https://employee-api-p2ts.onrender.com/master/${activeTab}/${id}`)
           
             setListData(listData.filter(item=>item.id!==id))
             if(activeTab=="dept"){

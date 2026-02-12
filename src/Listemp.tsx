@@ -26,7 +26,7 @@ const[sortType,setSortType]=useState("default");
 useEffect(()=>{
        const getemployee=async()=>{
         try{
-          const response=await axios.get("http://localhost:5000/employees")
+          const response=await axios.get("https://employee-api-p2ts.onrender.com/employees")
         setEmployees(response.data);
     }
         
